@@ -1,0 +1,11 @@
+<h1> Новая статья </h1>
+<form method="post" action="/posts/create_post/">
+    {% csrf_token %}
+    <label for="id_title">Заголовок:</label><br>
+    <input type="text" name="title" id="id_title" required><br><br>
+
+    <label for="id_full_text">Полный текст:</label><br>
+    <textarea name="full_text" id="id_full_text" rows="10" cols="50" required></textarea><br><br>
+
+    <button type="submit">Сохранить</button>
+  </form>

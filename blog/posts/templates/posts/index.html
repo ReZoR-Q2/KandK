@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список постов</title>
+</head>
+<body>
+    <h1>Посты</h1>
+    <ul>
+        {% for i in eee %}
+            <li><strong>{{ i.title }}</strong>: {{ i.full_text }},  {{ i.created_at }}</li>
+        {% empty %}
+            <li>Нет записей</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
